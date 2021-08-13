@@ -1,0 +1,68 @@
+.navbar-branch {
+    width: 14%;
+    float: left;
+    margin-right: 5%;
+}
+
+.topweb {
+    background-color: rgb(11, 149, 149);
+}
+
+.img-responsive {
+    width: 100%;
+    margin: 5% 0;
+}
+
+.text_right ul li a {
+    text-align: right;
+    color: white!important;
+}
+
+.text_right ul li {
+    width: 100%;
+}
+
+.img-logo-bars {
+    width: 100%;
+}
+
+.text_right ul {
+    margin-left: 15%;
+    width: 100%;
+}
+
+.d-flex {
+    width: 100%;
+}
+
+.btn-secondary {
+    color: red;
+    background-color: white;
+}
+
+.btn-secondary:hover {
+    color: black;
+    background-color: white;
+}
+
+.category {
+    background-color: white;
+    width: 100%;
+}
+
+.category ul li a:hover {
+    color: white;
+    background-color: rgb(11, 149, 149);
+}
+
+.category ul li a {
+    color: black;
+}
+
+.category ul li {
+    margin: 0 2% 0;
+}
+
+.flex-column li {
+    list-style-type: none;
+}
