@@ -66,3 +66,29 @@
 .flex-column li {
     list-style-type: none;
 }
+
+.special h1 {
+    margin: 3% 0 0;
+}
+
+.special h2 {
+    margin: 0 0;
+    height: 1%;
+}
+
+.content-sc-6 {
+    width: 90%;
+    color: white;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+.icon {
+    width: 10%;
+    height: 10%;
+}
+
+.row {
+    width: 90%;
+    margin: 0 5%;
+}
