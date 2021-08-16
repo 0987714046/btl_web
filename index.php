@@ -1,123 +1,6 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>demo</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-md navbar-light container-fluid topweb">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-branch" href="#"><img src="./imgs/logo.png" alt="" class="img-responsive"></a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-search"></i>
-              </button>
-
-            <div class=" search collapse navbar-collapse" id="navbarSearch">
-                <form class="d-flex">
-                    <input type="text" class="form-control " placeholder="Tìm khoá học bạn quan tâm ">
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button">
-                        <i class="fa fa-search" ></i>
-                    </button>
-                    </div>
-                </form>
-            </div>
-            <div class="collapse navbar-collapse text-left  text_right">
-                <ul class="navbar-nav me-auto  ">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Đăng nhập</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Đăng ký</a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </nav>
-    <nav class="collapse navbar-collapse  bg-light" id="navbarTogglerDemo03">
-        <ul class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 400px;">
-            <li class="nav-item topweb">
-                <a class="navbar-branch container-fluid" href="#" style="width: 50%;">
-                    <img src="./imgs/logo.png" alt="#" class="img-logo-bars">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa fa-bars"></i> Danh mục khóa học</a>
-
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Học online</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-mortar-board" aria-hidden="true"></i> Khóa học</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-mortar-board" aria-hidden="true"></i> Combo</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Tin tức</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký</a>
-            </li>
-        </ul>
-        <div class="clearfix"></div>
-    </nav>
-    <nav class="navbar navbar-expand-md  bg-light container-fluid category">
-
-        <div class="collapse navbar-collapse ">
-            <ul class="navbar-nav container-fluid text-left justify-content-start">
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa fa-bars"></i> Danh mục khóa học</a>
-
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Học online</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Khóa học</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Combo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tin tức</a>
-                </li>
-
-            </ul>
-        </div>
-        <div class="clearfix"></div>
-    </nav>
+<?php
+include("header.php")
+?>
     <nav id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -387,127 +270,65 @@
         </div>
         <div class="clearfix"></div>
     </nav>
-    <div class="container-fluid" style="background-color: black;">
-        <nav class="container-fluid text-center " style="background-color:rgb(6, 131, 133);">
-            <h2 class="text-center" style="color: white;">Bạn được gì sau khóa học ?</h2>
-            <div class="line-section"></div>
-            <div class="line-section2"></div>
-            <div class="row" style="background-color:rgb(6, 131, 133);">
-                <div class="row">
-                    <div class="box-learned col-md-6 col-lg-4 ">
-                        <img src="./imgs/learned-icon-1.png" alt="">
-                        <div style="color: white;">
 
-                            <p>Học từ vựng nhanh gấp 5 lần</p>
+    <nav class="container-fluid text-center " style="background-color:rgb(6, 131, 133);">
+        <h2 class="text-center" style="color: white;">Bạn được gì sau khóa học ?</h2>
+        <div class="line-section"></div>
+        <div class="line-section2"></div>
+        <div class="row" style="background-color:rgb(6, 131, 133);">
+            <div class="row">
+                <div class="box-learned col-md-6 col-lg-4 ">
+                    <img src="./imgs/learned-icon-1.png" alt="">
+                    <div style="color: white;">
 
-                        </div>
-                    </div>
-                    <div class="box-learned col-md-6 col-lg-4 ">
-                        <img src="./imgs/learned-icon-2.png" alt="">
-                        <div style="color: white;">
+                        <p>Học từ vựng nhanh gấp 5 lần</p>
 
-                            <p>Viết phiên âm hàng vạn từ</p>
-
-                        </div>
-                    </div>
-                    <div class="box-learned col-md-6 col-lg-4 ">
-                        <img src="./imgs/learned-icon-3.png" alt="">
-                        <div style="color: white;">
-
-                            <p>Nói chuẩn bản ngữ mọi từ</p>
-
-                        </div>
-                    </div>
-                    <div class="box-learned col-md-6 col-lg-4 ">
-                        <img src="./imgs/learned-icon-4.png" alt="">
-                        <div style="color: white;">
-
-                            <p>Hướng dẫn, dạy lại cho người khác</p>
-
-                        </div>
-                    </div>
-                    <div class="box-learned col-md-6 col-lg-4 ">
-                        <img src="./imgs/learned-icon-5.png" alt="">
-                        <div style="color: white;">
-
-                            <p>Tự sửa lỗi không cần sự hướng dẫn</p>
-
-                        </div>
-                    </div>
-                    <div class="box-learned col-md-6 col-lg-4 ">
-                        <img src="./imgs/learned-icon-6.png" alt="">
-                        <div style="color: white;">
-
-                            <p>Thuyết trình tiếng Anh như diễn giả</p>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="clearfix"></div>
-        </nav>
-        <nav class="container-fluid footer" style="background-color:black;">
-            <div class="row" style="margin: 3% ; background-color: black;color: white;">
-                <div class="col-lg-2 col-md-5 col-sm-4 col-xs-6">
-                    <img src="./imgs/logo.png" style="margin-top: 2%;" alt="" width="100%">
-
-                    <p><i class="fa fa-map-marker" style="color: #00a651;"></i>248 Lương Thế Vinh, Trung Văn, Nam Từ Liêm, HN</p>
-
-                    <p><i class="fa fa-phone" style="color: #00a651;"></i>0866225536</p>
-
-                    <p><i class="fa fa-envelope-o" style="color: #00a651;"></i>cskh@enpro.vn</p>
-
-                    <p><i class="fa fa-clock-o" style="color: #00a651;"></i> 8:00 - 22:00</p>
-
-                </div>
-                <div class="col-lg-2 col-md-5 col-sm-4 col-xs-6">
-                    <h4 style="color: #00a651;">Về Enpro</h4>
-                    <p>Giới thiệu về Enpro</p>
-                    <p>Câu hỏi thường gặp</p>
-                    <p>Điều khoản dịch vụ</p>
-                    <p>Điều khoản bảo mật</p>
-                    <p>Điều khoản hoàn hủy</p>
-                    <p>Hướng dẫn thanh toán</p>
-                    <p>Kích hoạt khóa học</p>
-                </div>
-                <div class="col-lg-3 col-md-5 col-sm-4 col-xs-6">
-                    <h4 style="color: #00a651;">Hợp tác liên kết</h4>
-                    <p>Hợp tác đào tạo</p>
-                    <p>Nhượng quyền cá nhân</p>
-                    <p>Nhượng quyền trung tâm</p>
-                    <p>Affiliate</p>
-                </div>
-                <div class="col-lg-2 col-md-5 col-sm-7 col-xs-6">
-                    <h4 style="color: #00a651;">Kết nối với Enpro</h4>
-                    <div class="d-flex">
-                        <img src="./imgs/icons8-facebook-48.png" alt="">
-                        <img src="./imgs/icons8-youtube-squared-48.png" alt="">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-7 col-sm-5 col-xs-12">
-                    <img src="./imgs/pre-order.jpg" alt="">
+                <div class="box-learned col-md-6 col-lg-4 ">
+                    <img src="./imgs/learned-icon-2.png" alt="">
+                    <div style="color: white;">
+
+                        <p>Viết phiên âm hàng vạn từ</p>
+
+                    </div>
                 </div>
+                <div class="box-learned col-md-6 col-lg-4 ">
+                    <img src="./imgs/learned-icon-3.png" alt="">
+                    <div style="color: white;">
+
+                        <p>Nói chuẩn bản ngữ mọi từ</p>
+
+                    </div>
+                </div>
+                <div class="box-learned col-md-6 col-lg-4 ">
+                    <img src="./imgs/learned-icon-4.png" alt="">
+                    <div style="color: white;">
+
+                        <p>Hướng dẫn, dạy lại cho người khác</p>
+
+                    </div>
+                </div>
+                <div class="box-learned col-md-6 col-lg-4 ">
+                    <img src="./imgs/learned-icon-5.png" alt="">
+                    <div style="color: white;">
+
+                        <p>Tự sửa lỗi không cần sự hướng dẫn</p>
+
+                    </div>
+                </div>
+                <div class="box-learned col-md-6 col-lg-4 ">
+                    <img src="./imgs/learned-icon-6.png" alt="">
+                    <div style="color: white;">
+
+                        <p>Thuyết trình tiếng Anh như diễn giả</p>
+
+                    </div>
+                </div>
+
             </div>
             <div class="clearfix"></div>
-        </nav>
-        <div class="footer2 col-lg-12" style="margin-top: 10px;color: white; ">
-            <p>
-                © CÔNG TY CP ĐÁNH VẦN TIẾNG ANH ENPRO - 105 Nguyễn Xiển - Hạ Đình - Thanh Xuân - Hà Nội – MST: 0108890774. Giấp phép kinh doanh cấp 09/09/2019
-            </p>
-            <img src="./imgs/bct.png" alt="">
-        </div>
-        </div>
-
-        <!-- Optional JavaScript; choose one of the two! -->
-
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-</body>
-
-</html>
+    </nav>
+<?php
+include("theend.php")
+?>
