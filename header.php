@@ -20,7 +20,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-branch" href="#"><img src="./imgs/logo.png" alt="" class="img-responsive"></a>
+            <a class="navbar-branch" href="index.php"><img src="./imgs/logo.png" alt="" class="img-responsive"></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-search"></i>
@@ -72,13 +72,13 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-mortar-board" aria-hidden="true"></i> Khóa học</a>
+                <a class="nav-link" href="course.php"><i class="fa fa-mortar-board" aria-hidden="true"></i> Khóa học</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fa fa-mortar-board" aria-hidden="true"></i> Combo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Tin tức</a>
+                <a class="nav-link" href="news.php"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Tin tức</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
@@ -105,13 +105,13 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Khóa học</a>
+                    <a class="nav-link" href="course.php">Khóa học</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Combo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tin tức</a>
+                    <a class="nav-link" href="news.php">Tin tức</a>
                 </li>
 
             </ul>
