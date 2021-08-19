@@ -1,0 +1,27 @@
+    /* style login */
+    
+    input [type="email"] {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    input [type="password"] {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-top: 0px;
+    }
+    
+    .text-center {
+        background-color: #08c9b9;
+    }
+    
+    .login {
+        background-color: rgb(69, 95, 241);
+        color: white;
+    }
+    /* style log-up */
+    
+    .log-up {
+        background-color: rgb(69, 95, 241);
+        color: white;
+    }
