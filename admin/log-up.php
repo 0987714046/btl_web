@@ -13,8 +13,9 @@
   <body>
  <div class="text-center  ">
      <form style="max-width:320px; margin:auto;">
-        <img class="mb-4" src="img/logo.png" height="75" alt="logo">
+        <img class="mb-4" href="btl_web\index.php" src="img/logo.png" height="75" alt="logo">
         <h1 class="h3 mb-3 font-weight-normal text-primary ">ĐĂNG KÝ</h1>
+        
         <label for="fullname" class="sr-only"></label>
         <input type="fullname" id="fullname" class="form-control" placeholder="Họ tên">
         <label for="email" class="sr-only"></label>

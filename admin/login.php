@@ -1,44 +1,96 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+    include("config/db.php");
+    session_start();
+    include("template/header.php");
+?>
+    <html>
+    <head>
+        <title>Login - Food Order System</title>
+        <link rel="stylesheet" href="../css/admin.css">
+    </head>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <title>login</title>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body>
- <div class="text-center mt-4 ">
-     <form style="max-width:320px; margin:auto;">
-        <img class="mt-4 mb-4" src="img/logo.png" height="75" alt="logo">
-        <h1 class="h3 mb-3 font-weight-normal text-primary ">ĐĂNG NHẬP</h1>
-        <label for="email" class="sr-only"></label>
-        <input type="email" id="email" class="form-control" placeholder="Email"
-        required autofocus>
-        <label for="password" class="sr-only"></label>
-        <input type="password" id="password" placeholder="password" class="form-control">
-        <p>* nếu chưa có tài khoản vui lòng ấn Đăng Ký</p>
-        <div class="mt-3">
-          <button class="btn btn-lg btn-block login">Đăng Nhập</button>
+    <body>
+        
+        <div class="login">
+            <h1 class="text-center">Login</h1>
+            <br><br>
+
+            <?php 
+                if(isset($_SESSION['login']))
+                {
+                    echo $_SESSION['login'];
+                    unset($_SESSION['login']);
+                }
+
+                if(isset($_SESSION['no-login-message']))
+                {
+                    echo $_SESSION['no-login-message'];
+                    unset($_SESSION['no-login-message']);
+                }
+            ?>
+            <br><br>
+
+            <!-- Login Form Starts HEre -->
+            <form action="" method="POST" class="text-center">
+            Username: <br>
+            <input type="text" name="username" placeholder="Enter Username"><br><br>
+
+            Password: <br>
+            <input type="password" name="password" placeholder="Enter Password"><br><br>
+
+            <input type="submit" name="submit" value="Login" class="btn-primary">
+            <br><br>
+            </form>
+            <!-- Login Form Ends HEre -->
+
+            <p class="text-center">Created By - <a href="www.vijaythapa.com">CSE485</a></p>
         </div>
-        <div class="mt-3">
-          <button class="btn btn-lg btn-danger btn-block" style="margin-bottom: 43% ; width: 43%">Đăng Ký</button>
-        </div>
-     </form>
-  </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    -->
-  </body>
+    </body>
 </html>
+
+<?php 
+
+    //CHeck whether the Submit Button is Clicked or NOt
+    if(isset($_POST['submit']))
+    {
+        //Process for Login
+        //1. Get the Data from Login form
+        // $username = $_POST['username'];
+        // $password = md5($_POST['password']);
+        $username = mysqli_real_escape_string($conn, $_POST['username']);
+        
+        $raw_password = md5($_POST['password']);
+        $password = mysqli_real_escape_string($conn, $raw_password);
+
+        //2. SQL to check whether the user with username and password exists or not
+        $sql = "SELECT * FROM user WHERE email='$username' AND pass_word='$password'";
+
+        //3. Execute the Query
+        $res = mysqli_query($conn, $sql);
+
+        //4. COunt rows to check whether the user exists or not
+        $count = mysqli_num_rows($res);
+
+        if($count==1)
+        {
+            //User AVailable and Login Success
+            $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
+            $_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
+
+            //REdirect to HOme Page/Dashboard
+            header("Location:./index.php");
+        }
+        else
+        {
+            //User not Available and Login FAil
+            $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
+            //REdirect to HOme Page/Dashboard
+            header("Location:login.php");
+        }
+
+
+    }
+    ?>
+
+    

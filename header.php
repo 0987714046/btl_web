@@ -42,10 +42,10 @@
                         <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Đăng nhập</a>
+                        <a class="nav-link" href="admin\login.php">Đăng nhập</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Đăng ký</a>
+                        <a class="nav-link" href="admin\log-up.php">Đăng ký</a>
                     </li>
                 </ul>
 
@@ -84,10 +84,10 @@
                 <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</a>
+                <a class="nav-link" href="admin\login.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký</a>
+                <a class="nav-link" href="admin\log-up.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký</a>
             </li>
         </ul>
         <div class="clearfix"></div>

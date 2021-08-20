@@ -21,7 +21,6 @@
     }
     /* style log-up */
     
-    .log-up {
-        background-color: rgb(69, 95, 241);
-        color: white;
+    .logup {
+        border-radius: 5px;
     }
