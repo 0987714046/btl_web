@@ -2,8 +2,10 @@
     include("config/db.php");
     
     session_start();
-    if(!isset($_SESSION['login'])){
-    header("Location:login.php");}
+    if(!isset($_SESSION['login']))
+    {
+        header('location:'.SITEURL.'/admin/login.php');  
+    }
     include("template/header.php");
 ?>
 
@@ -35,45 +37,74 @@
                             <th scope="col">ID</th>
                             <th scope="col">Full Name</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Phone number</th>
+                            <th scope="col">ID Course</th>
+                            <th scope="col">Account</th>
                             <th scope="col">Update Account</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>
+                       
+                        <?php
+                         $sql = "SELECT * FROM user";
+                         //Execute the Query
+                         $res = mysqli_query($conn, $sql);
+ 
+                         //CHeck whether the Query is Executed of Not
+                         if($res==TRUE)
+                         {
+                             // Count Rows to CHeck whether we have data in database or not
+                             $count = mysqli_num_rows($res); // Function to get all the rows in database
+ 
+                             $sn=1; //Create a Variable and Assign the value
+ 
+                             //CHeck the num of rows
+                             if($count>0)
+                             {
+                                 //WE HAve data in database
+                                 while($rows=mysqli_fetch_assoc($res))
+                                 {
+                                     //Using While loop to get all the data from database.
+                                     //And while loop will run as long as we have data in database
+ 
+                                     //Get individual DAta
+                                     $id=$rows['ID'];
+                                     $fullname=$rows['full_name'];
+                                     $email=$rows['email'];
+                                     $phonenumber=$rows['phone_number'];
+                                     $idcourse=$rows['id_course'];
+                                     $account=$rows['account'];
+ 
+                                     //Display the Values in our Table
+                                     ?>
+                                     
+                                     <tr>
+                                         <td><?php echo $sn++; ?>. </td>
+                                         <td><?php echo $fullname; ?></td>
+                                         <td><?php echo $email; ?></td>
+                                         <td><?php echo $phonenumber; ?></td>
+                                         <td><?php echo $idcourse; ?></td>
+                                         <td><?php echo $account; ?></td>
+                                         <td>
                                 <div class="d-flex">
-                                    <button class="btl_account" type="button">Add Admim</button>
-                                    <button class="btl_account" type="button">Delete Admim</button>
+                                    <button class="btl_account" type="button">Update Admin</button>
+                                    <button class="btl_account" type="button">Delete account</button>
                                     <button class="btl_account" type="button">Change password</button>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>
-                                <div class="d-flex">
-                                    <button class="btl_account" type="button">Add Admim</button>
-                                    <button class="btl_account" type="button">Delete Admim</button>
-                                    <button class="btl_account" type="button">Change password</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>
-                                <div class="d-flex">
-                                    <button class="btl_account" type="button">Add Admim</button>
-                                    <button class="btl_account" type="button">Delete Admim</button>
-                                    <button class="btl_account" type="button">Change password</button>
-                                </div>
-                            </td>
-                        </tr>
+                                     </tr>
+ 
+                                     <?php
+ 
+                                 }
+                             }
+                             else
+                             {
+                                 //We Do not Have Data in Database
+                             }
+                         }
+
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -189,7 +220,7 @@
         <div class="row">
             <div class="row " style="margin: 3% ; background-color: black;color: white;">
                 <div class="col-lg-2 col-md-5 col-sm-4 col-xs-6">
-                    <img src="./imgs/logo.png" style="margin-top: 2%;" alt="" width="100%">
+                    <img src="./img/logo.png" style="margin-top: 2%;" alt="" width="100%">
 
                     <p><i class="fa fa-map-marker" style="color: #00a651;"></i>248 Lương Thế Vinh, Trung Văn, Nam Từ Liêm, HN</p>
 
@@ -220,12 +251,12 @@
                 <div class="col-lg-2 col-md-5 col-sm-7 col-xs-6">
                     <h4 style="color: #00a651;">Kết nối với Enpro</h4>
                     <div class="d-flex">
-                        <img src="./imgs/icons8-facebook-48.png" alt="">
-                        <img src="./imgs/icons8-youtube-squared-48.png" alt="">
+                        <img src="./img/icons8-facebook-48.png" alt="">
+                        <img src="./img/icons8-youtube-squared-48.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-7 col-sm-5 col-xs-12">
-                    <img src="./imgs/pre-order.jpg" alt="">
+                    <img src="./img/pre-order.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -234,7 +265,7 @@
             <p>
 
                 © CÔNG TY CP ĐÁNH VẦN TIẾNG ANH ENPRO - 105 Nguyễn Xiển - Hạ Đình - Thanh Xuân - Hà Nội – MST: 0108890774. Giấp phép kinh doanh cấp 09/09/2019
-                <img src="./imgs/bct.png" style="margin: 1% 0 0 93%;" alt="">
+                <img src="./img/bct.png" style="margin: 1% 0 0 93%;" alt="">
             </p>
 
         </div>

@@ -41,9 +41,9 @@
             <input type="submit" name="submit" value="Login" class="btn-primary">
             <br><br>
             </form>
-            <!-- Login Form Ends HEre -->
+         
 
-            <p class="text-center">Created By - <a href="www.vijaythapa.com">CSE485</a></p>
+            <p class="text-center">Created By - <a href="https://www.facebook.com/profile.php?id=100004869885566">Cuong and Hiếu</a></p>
         </div>
 
     </body>
@@ -71,22 +71,23 @@
 
         //4. COunt rows to check whether the user exists or not
         $count = mysqli_num_rows($res);
+     
 
-        if($count==1)
+        if($count==1 )
         {
             //User AVailable and Login Success
             $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
             $_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
 
             //REdirect to HOme Page/Dashboard
-            header("Location:./index.php");
+            header('location:'.SITEURL.'/admin/');
         }
         else
         {
             //User not Available and Login FAil
             $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
             //REdirect to HOme Page/Dashboard
-            header("Location:login.php");
+            header('location:'.SITEURL.'/admin/login.php');
         }
 
 
