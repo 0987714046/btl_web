@@ -5,14 +5,14 @@
 ?>
     <html>
     <head>
-        <title>Login - Food Order System</title>
+        <title>Login </title>
         <link rel="stylesheet" href="../css/admin.css">
     </head>
 
-    <body>
+    <body style="background-color: rgb(166, 226, 226);">
         
-        <div class="login">
-            <h1 class="text-center">Login</h1>
+        <div class="login" style="background-color: rgb(166, 226, 226);">
+            <h1 class="text-center">Đăng Nhập</h1>
             <br><br>
 
             <?php 
@@ -31,19 +31,22 @@
             <br><br>
 
             <!-- Login Form Starts HEre -->
-            <form action="" method="POST" class="text-center">
-            Username: <br>
-            <input type="text" name="username" placeholder="Enter Username"><br><br>
+            <form action="" method="POST" class="text-left" style=" width: 30%;margin : 0 35%;" >
+            <h4>Tài khoản:</h4> <br>
+            <input type="text" name="username"  placeholder="Nhập tài khoản" size="50"><br><br>
 
-            Password: <br>
-            <input type="password" name="password" placeholder="Enter Password"><br><br>
-
-            <input type="submit" name="submit" value="Login" class="btn-primary">
+            <h4>Mật khẩu:</h4> <br>
+            <input type="password" name="password" placeholder="Nhập mật khẩu" size="50"><br><br>
+            <div >
+            <input type="submit" name="submit" style="border-radius: 5px;margin : 0 10%;" value="Đăng nhập" class="btn-primary">
             
+                <button type="button" style="border-radius: 5px;margin : 0 10%;" class="text-center  btn-primary">
+            <a  style="color:white;" href="logup.php"> Đăng ký </a>
+            </button>
+            </div>
             <br><br>
             </form>
-            <a href="logup.php"> Logup </a>
-         
+            
 
             <p class="text-center">Created By - <a href="https://www.facebook.com/profile.php?id=100004869885566">Cuong and Hiếu</a></p>
         </div>

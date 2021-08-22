@@ -3,41 +3,45 @@
     session_start();
     include("template/header.php");
 ?>
-    <div id="main-main" class="container-fluid" >
-        <main>
-            <form method="POST" action="">
+<body style="background-color: rgb(166, 226, 226);">
+    
+
+    <div id="main-main" class="container-fluid" style="background-color: rgb(166, 226, 226);" >
+    <h1 class="text-center">Đăng Ký</h1>
+        <main class="text-center" style="background-color: rgb(166, 226, 226);">
+            <form method="POST" action="" style="background-color: rgb(166, 226, 226);width: 30%;margin : 6% 35%;">
                 <table>
                 <tr>
-                        <td>Account</td>
+                        <td>Tài KHoản</td>
                         <td>
-                            <input type="text" name="txtAccount" placeholder="Enter Account">
+                            <input type="text" name="txtAccount" placeholder="Nhập tài khoản" size="50">
                         </td>
                     </tr>
                     <tr>
-                        <td>Full Name</td>
+                        <td>Họ tên</td>
                         <td>
-                            <input type="text" name="txtFullName" placeholder="Enter Fullname">
+                            <input type="text" name="txtFullName" placeholder="Nhập họ tên" size="50">
                         </td>
                     </tr>
                    
                     <tr>
-                        <td>Phone number</td>
+                        <td>Số điện thoại</td>
                         <td>
-                            <input type="number" name="txtPhonenumber" placeholder="Enter phone number">
+                            <input type="int" name="txtPhonenumber" placeholder="nhập số điện thoại" size="50">
                         </td>
                     </tr>
                     
                    
                     <tr>
-                        <td>Password</td>
+                        <td>Mật khẩu</td>
                         <td>
-                            <input type="password" name="txtPass" placeholder="Enter Password">
+                            <input type="password" name="txtPass" placeholder="Nhập mật khẩu" size="50">
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
-                            <input type="submit" name="btnAddUser" value="Log up" class="btn btn-success">
+                            <input type="submit" name="btnAddUser" value="Đăng ký" class="btn btn-success" size="50">
                         </td>
                     </tr>
                     
@@ -76,5 +80,5 @@
             
         </main>
     </div>
-
+    </body>
    

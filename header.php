@@ -28,14 +28,17 @@
 
             <div class=" search collapse navbar-collapse" id="navbarSearch">
                 <form class="d-flex">
-                    <input type="text" class="form-control " placeholder="Tìm khoá học bạn quan tâm ">
+                    <input type="text" class="form-control " name ="search" placeholder="Tìm khoá học bạn quan tâm ">
                     <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button">
+                        <button class="btn btn-secondary"  type="submit" name="submid">
                         <i class="fa fa-search" ></i>
                     </button>
                     </div>
                 </form>
             </div>
+            
+            
+
             <div class="collapse navbar-collapse text-left  text_right">
                 <ul class="navbar-nav me-auto  ">
                     <li class="nav-item">

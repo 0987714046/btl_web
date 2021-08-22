@@ -31,39 +31,12 @@
     width: 100%;
 }
 
-.d-flex {
-    width: 100%;
+.btl {
+    background-color: rgb(14, 142, 162)!important;
+    color: rgb(216, 22, 22) !important;
+    border-radius: 5px!important;
 }
 
-.bt .category {
-    background-color: white;
-    width: 82%;
-}
-
-.category ul {
-    list-style-type: none;
-}
-
-.category ul li a:hover {
-    color: white;
-    background-color: rgb(11, 149, 149);
-}
-
-.category ul li a {
-    color: black;
-}
-
-.category ul li {
-    margin: 0 6% 0;
-    width: 60%;
-}
-
-.flex-column li {
-    list-style-type: none;
-}
-
-.btl_account {
-    margin: 0 1%;
+.btl:hover {
     background-color: aqua;
-    border-radius: 5px;
 }
