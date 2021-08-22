@@ -39,8 +39,10 @@
             <input type="password" name="password" placeholder="Enter Password"><br><br>
 
             <input type="submit" name="submit" value="Login" class="btn-primary">
+            
             <br><br>
             </form>
+            <a href="logup.php"> Logup </a>
          
 
             <p class="text-center">Created By - <a href="https://www.facebook.com/profile.php?id=100004869885566">Cuong and Hiếu</a></p>
@@ -64,7 +66,7 @@
         $password = mysqli_real_escape_string($conn, $raw_password);
 
         //2. SQL to check whether the user with username and password exists or not
-        $sql = "SELECT * FROM user WHERE email='$username' AND pass_word='$password'";
+        $sql = "SELECT * FROM user WHERE account='$username' AND password='$password'";
 
         //3. Execute the Query
         $res = mysqli_query($conn, $sql);

@@ -34,12 +34,12 @@
                 <table class="table">
                     <thead>
                         <tr>
+                        <th scope="col">S.N</th>
                             <th scope="col">ID</th>
                             <th scope="col">Full Name</th>
-                            <th scope="col">Email</th>
                             <th scope="col">Phone number</th>
-                            <th scope="col">ID Course</th>
                             <th scope="col">Account</th>
+                            
                             <th scope="col">Update Account</th>
                         </tr>
                     </thead>
@@ -70,21 +70,24 @@
                                      //Get individual DAta
                                      $id=$rows['ID'];
                                      $fullname=$rows['full_name'];
-                                     $email=$rows['email'];
+                                     
                                      $phonenumber=$rows['phone_number'];
-                                     $idcourse=$rows['id_course'];
                                      $account=$rows['account'];
+                                     
+                                     
  
                                      //Display the Values in our Table
                                      ?>
                                      
                                      <tr>
                                          <td><?php echo $sn++; ?>. </td>
+                                         <td><?php echo $id; ?></td>
                                          <td><?php echo $fullname; ?></td>
-                                         <td><?php echo $email; ?></td>
+                                         
                                          <td><?php echo $phonenumber; ?></td>
-                                         <td><?php echo $idcourse; ?></td>
+                                        
                                          <td><?php echo $account; ?></td>
+                                         
                                          <td>
                                 <div class="d-flex">
                                     <button class="btl_account" type="button">Update Admin</button>

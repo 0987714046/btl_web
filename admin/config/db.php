@@ -5,7 +5,7 @@
     define('HOST','localhost');
     define('USER','root');
     define('PASS','');
-    define('DB_NAME','project_web');
+    define('DB_NAME','db_project');
     define('PORT','3306');
     $conn = mysqli_connect(HOST,USER,PASS,DB_NAME);
     if(!$conn){

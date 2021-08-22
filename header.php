@@ -45,7 +45,7 @@
                         <a class="nav-link" href="admin\login.php">Đăng nhập</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="admin\log-up.php">Đăng ký</a>
+                        <a class="nav-link" href="admin\logup.php">Đăng ký</a>
                     </li>
                 </ul>
 

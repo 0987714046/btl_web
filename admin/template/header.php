@@ -28,7 +28,7 @@
                     
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a>
+                        <a class="nav-link" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a>
                     </li>
                 </ul>
 
