@@ -1,13 +1,39 @@
 <?php
     include("config/db.php");
     session_start();
-    include("template/header.php");
+    
 ?>
-    <html>
-    <head>
-        <title>Login </title>
-        <link rel="stylesheet" href="../css/admin.css">
-    </head>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>demo</title>
+    <link rel="stylesheet" href="./css/style1.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light container-fluid topweb">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-branch" href="index.php"><img src="./imgs/logo.png" alt="" class="img-responsive"></a>
+
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </nav>
+   
 
     <body style="background-color: rgb(166, 226, 226);">
         
@@ -80,12 +106,24 @@
 
         if($count==1 )
         {
-            //User AVailable and Login Success
-            $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
-            $_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
+            $sqli="SELECT * FROM `user` WHERE account='$username' AND permission=1";
+					$kt=mysqli_query($conn, $sqli);
+                    $k =mysqli_num_rows($kt);
 
-            //REdirect to HOme Page/Dashboard
-            header('location:'.SITEURL.'/admin/');
+					if( $k==1){
+	
+            
+                    $_SESSION['login'] = "";
+                    $_SESSION['user'] = $username; 
+
+          
+                    header('location:'.SITEURL.'/admin/');
+                    }else{
+                        $_SESSION['login'] = "";
+                        $_SESSION['user'] = $username;
+            
+                        header('location:'.SITEURL.'../index.php');
+                     }
         }
         else
         {

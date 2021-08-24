@@ -20,7 +20,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-branch" href="index.php"><img src="./img/logo.png" alt="" class="img-responsive"></a>
+            <a class="navbar-branch" href="index.php"><img src="./imgs/logo.png" alt="" class="img-responsive"></a>
 
 
             <div class=" text_right">

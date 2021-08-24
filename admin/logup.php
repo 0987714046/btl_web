@@ -63,11 +63,6 @@
                     //Bước 02: Thực hiện truy vấn 
                     $sql ="INSERT INTO user (ID,full_name, phone_number, account, password, permission )  VALUES ( '','$fullName','$phonenumber','$account', '$pass_md5', '0');";
               
-                    
-                    
-                    
-                    
-                   
                     if(mysqli_query($conn,$sql)){
                         header('location:'.SITEURL.'/admin/login.php');
                     }
@@ -80,5 +75,11 @@
             
         </main>
     </div>
+    <br><br>
+            </form>
+            
+
+            <p class="text-center">Created By - <a href="https://www.facebook.com/profile.php?id=100004869885566">Cuong and Hiếu</a></p>
+        </div>
     </body>
    
