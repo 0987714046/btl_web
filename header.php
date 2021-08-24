@@ -27,14 +27,15 @@
               </button>
 
             <div class=" search collapse navbar-collapse" id="navbarSearch">
-                <form class="d-flex">
+                <form class="d-flex" action="" method="GET" role="form">
                     <input type="text" class="form-control " name ="search" placeholder="Tìm khoá học bạn quan tâm ">
                     <div class="input-group-append">
-                        <button class="btn btn-secondary"  type="submit" name="submid">
+                        <button class="btn btn-secondary"  type="submit" name="submit">
                         <i class="fa fa-search" ></i>
                     </button>
                     </div>
                 </form>
+               
             </div>
             
             

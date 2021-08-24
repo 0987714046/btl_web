@@ -30,13 +30,3 @@
     margin-left: 15%;
     width: 100%;
 }
-
-.btl {
-    background-color: rgb(14, 142, 162)!important;
-    color: rgb(216, 22, 22) !important;
-    border-radius: 5px!important;
-}
-
-.btl:hover {
-    background-color: aqua;
-}
