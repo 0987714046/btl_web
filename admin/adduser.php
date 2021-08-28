@@ -61,6 +61,7 @@
                     //Kiểm tra: Trước khi thêm Tài khoản, phải kiểm tra username và email này có tồn tại chưa?
                     //Nếu chưa tồn tại thì mới thêm;
                     //Bước 02: Thực hiện truy vấn 
+<<<<<<< HEAD
                     if ($account == "" || $fullName == "" || $phonenumber == "" || $pass == "") {
                         echo "bạn vui lòng nhập đầy đủ thông tin";
                    }else{
@@ -80,6 +81,15 @@
                                              
                          
                    }
+=======
+                    $sql ="INSERT INTO user (ID,full_name, phone_number, account, password, permission )  VALUES ( '','$fullName','$phonenumber','$account', '$pass_md5', '0');";
+              
+                    if(mysqli_query($conn,$sql)){
+                       
+                        header("location:index.php");
+                    }
+                    
+>>>>>>> 382f2d670f1217880616fce735f33bfe11c795c9
                     
                 }
                

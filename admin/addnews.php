@@ -58,6 +58,7 @@
                     
                     
                     
+<<<<<<< HEAD
                     if ($title == "" || $content == "" || $post == "" || $img == "") {
                         echo "bạn vui lòng nhập đầy đủ thông tin";
                     }else{
@@ -76,6 +77,21 @@
                  
                   
                 
+=======
+                    
+                    //Kiểm tra: Dữ liệu người dùng nhập có đang BỎ TRỐNG trường nào KO?
+                    //CSDL của chúng ta đã lưu Mật khẩu ở dạng THÔ
+                    //Kiểm tra: Trước khi thêm Tài khoản, phải kiểm tra username và email này có tồn tại chưa?
+                    //Nếu chưa tồn tại thì mới thêm;
+                    //Bước 02: Thực hiện truy vấn 
+                    $sql =" INSERT INTO `news` (`id`, `title`, `image`, `content`, `post_date`) VALUES ( '','$title','./imgs/$img','$content', '$post');";
+                    if(mysqli_query($conn,$sql)){
+                       
+                     header("location:index.php");
+                 }
+                   
+                }
+>>>>>>> 382f2d670f1217880616fce735f33bfe11c795c9
                
 
             ?>
