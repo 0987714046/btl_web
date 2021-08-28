@@ -122,7 +122,7 @@ include("header.php")
             } 
 
             //b2
-            $sql   ="SELECT * FROM course";
+            $sql   ="SELECT * FROM course LIMIT 4";
             $result =mysqli_query($con,$sql);
             
             //b3
@@ -165,7 +165,7 @@ include("header.php")
         mysqli_close($con)
             ?>
           </div> 
-        <button type="button" style="background-color: #00a651;color: white;border-radius: 7px;margin: 0 40%;width: 20%;"> <h4 style="margin: 2% 5%;">Xem thêm</h4></button>
+        <button type="button" style="background-color: #00a651;color: white;border-radius: 7px;margin: 0 40%;width: 20%;"> <h4 style="margin: 2% 5%;"><a href="couse.php" style="color:white;"> Xem thêm</a></h4></button>
         <div class="clearfix"></div>
     </nav>
     <nav class=" text-white d-flex navbar-expand-md" style="background-image: url(./imgs/choose.png); margin-top: 5%;">
