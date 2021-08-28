@@ -7,7 +7,7 @@
     
 
     <div id="main-main" class="container-fluid" style="background-color: rgb(166, 226, 226);" >
-    <h1 class="text-center">Đăng Ký</h1>
+    <h1 class="text-center">Add User</h1>
         <main class="text-center" style="background-color: rgb(166, 226, 226);">
             <form method="POST" action="" style="background-color: rgb(166, 226, 226);width: 30%;margin : 6% 35%;">
                 <table>
@@ -41,7 +41,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <input type="submit" name="btnAddUser" value="Đăng ký" class="btn btn-success" size="50">
+                            <input type="submit" name="btnAddUser" value="Thêm" class="btn btn-success" size="50">
                         </td>
                     </tr>
                     
@@ -54,6 +54,13 @@
                     $phonenumber = $_POST['txtPhonenumber'];
                     $pass       = $_POST['txtPass'];
                     $pass_md5   = md5($pass);
+                    
+                    
+                    //Kiểm tra: Dữ liệu người dùng nhập có đang BỎ TRỐNG trường nào KO?
+                    //CSDL của chúng ta đã lưu Mật khẩu ở dạng THÔ
+                    //Kiểm tra: Trước khi thêm Tài khoản, phải kiểm tra username và email này có tồn tại chưa?
+                    //Nếu chưa tồn tại thì mới thêm;
+                    //Bước 02: Thực hiện truy vấn 
                     if ($account == "" || $fullName == "" || $phonenumber == "" || $pass == "") {
                         echo "bạn vui lòng nhập đầy đủ thông tin";
                    }else{
@@ -73,14 +80,6 @@
                                              
                          
                    }
-                    
-                    //Kiểm tra: Dữ liệu người dùng nhập có đang BỎ TRỐNG trường nào KO?
-                    //CSDL của chúng ta đã lưu Mật khẩu ở dạng THÔ
-                    //Kiểm tra: Trước khi thêm Tài khoản, phải kiểm tra username và email này có tồn tại chưa?
-                    //Nếu chưa tồn tại thì mới thêm;
-                    //Bước 02: Thực hiện truy vấn 
-                    
-                    
                     
                 }
                
