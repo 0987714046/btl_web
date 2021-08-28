@@ -1,13 +1,16 @@
 <?php
     include("config/db.php");
     session_start();
+    if (!isset($_SESSION['login'])) {
+        header('location:' . SITEURL . '/admin/login.php');
+    }
     include("template/header.php");
 ?>
 <body style="background-color: rgb(166, 226, 226);">
     
 
     <div id="main-main" class="container-fluid" style="background-color: rgb(166, 226, 226);" >
-    <h1 class="text-center">Add User</h1>
+    <h1 class="text-center">Thêm tin tức</h1>
         <main class="text-center" style="background-color: rgb(166, 226, 226);">
             <form method="POST" action="" style="background-color: rgb(166, 226, 226);width: 30%;margin : 6% 35%;">
                 <table>
@@ -57,15 +60,15 @@
                     $img      = $_POST['img'];
                     
                     
-                    
-<<<<<<< HEAD
+     
+
                     if ($title == "" || $content == "" || $post == "" || $img == "") {
                         echo "bạn vui lòng nhập đầy đủ thông tin";
                     }else{
                         $sql =" INSERT INTO `news` (`id`, `title`, `image`, `content`, `post_date`) VALUES ( '','$title','./imgs/$img','$content', '$post');";
                         if(mysqli_query($conn,$sql)){
                            
-                         header("location:index.php");
+                            header('location:'.SITEURL.'/admin/index.php');
                      }
                        
                     }
@@ -77,21 +80,7 @@
                  
                   
                 
-=======
-                    
-                    //Kiểm tra: Dữ liệu người dùng nhập có đang BỎ TRỐNG trường nào KO?
-                    //CSDL của chúng ta đã lưu Mật khẩu ở dạng THÔ
-                    //Kiểm tra: Trước khi thêm Tài khoản, phải kiểm tra username và email này có tồn tại chưa?
-                    //Nếu chưa tồn tại thì mới thêm;
-                    //Bước 02: Thực hiện truy vấn 
-                    $sql =" INSERT INTO `news` (`id`, `title`, `image`, `content`, `post_date`) VALUES ( '','$title','./imgs/$img','$content', '$post');";
-                    if(mysqli_query($conn,$sql)){
-                       
-                     header("location:index.php");
-                 }
-                   
-                }
->>>>>>> 382f2d670f1217880616fce735f33bfe11c795c9
+
                
 
             ?>

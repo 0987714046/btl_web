@@ -1,13 +1,16 @@
 <?php
     include("config/db.php");
     session_start();
+    if (!isset($_SESSION['login'])) {
+        header("location: /admin/login.php");
+    }
     include("template/header.php");
 ?>
 <body style="background-color: rgb(166, 226, 226);">
     
 
     <div id="main-main" class="container-fluid" style="background-color: rgb(166, 226, 226);" >
-    <h1 class="text-center">Add User</h1>
+    <h1 class="text-center">Thêm người dùng</h1>
         <main class="text-center" style="background-color: rgb(166, 226, 226);">
             <form method="POST" action="" style="background-color: rgb(166, 226, 226);width: 30%;margin : 6% 35%;">
                 <table>
@@ -61,7 +64,7 @@
                     //Kiểm tra: Trước khi thêm Tài khoản, phải kiểm tra username và email này có tồn tại chưa?
                     //Nếu chưa tồn tại thì mới thêm;
                     //Bước 02: Thực hiện truy vấn 
-<<<<<<< HEAD
+
                     if ($account == "" || $fullName == "" || $phonenumber == "" || $pass == "") {
                         echo "bạn vui lòng nhập đầy đủ thông tin";
                    }else{
@@ -75,21 +78,13 @@
                             $sql ="INSERT INTO user (ID,full_name, phone_number, account, password, permission )  VALUES ( '','$fullName','$phonenumber','$account', '$pass_md5', '0');";
               
                             if(mysqli_query($conn,$sql)){
-                                header('location:'.SITEURL.'/admin/login.php');
+                                header('location:'.SITEURL.'/admin/index.php');
                             }
                          }
                                              
                          
                    }
-=======
-                    $sql ="INSERT INTO user (ID,full_name, phone_number, account, password, permission )  VALUES ( '','$fullName','$phonenumber','$account', '$pass_md5', '0');";
-              
-                    if(mysqli_query($conn,$sql)){
-                       
-                        header("location:index.php");
-                    }
-                    
->>>>>>> 382f2d670f1217880616fce735f33bfe11c795c9
+
                     
                 }
                
