@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse text-left  text_right">
                 <ul class="navbar-nav me-auto  ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
+                        <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="admin\login.php">Đăng nhập</a>
@@ -72,7 +72,7 @@
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa fa-bars"></i> Danh mục khóa học</a>
 
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Học online</a>
+                    <a class="dropdown-item" href="course.php">Học online</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -85,7 +85,7 @@
                 <a class="nav-link" href="news.php"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Tin tức</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
+                <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="admin\login.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</a>

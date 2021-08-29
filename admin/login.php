@@ -122,7 +122,7 @@
                         $_SESSION['login'] = "";
                         $_SESSION['user'] = $username;
             
-                        header('location:'.SITEURL.'../index.php');
+                        header('location:'.SITEURL.'../cart.php');
                      }
         }
         else

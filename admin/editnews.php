@@ -35,7 +35,7 @@ $row=mysqli_fetch_assoc($query);
 <table>
 <tr><td> Tiêu Đề:</td><td><input type="text" value="<?php echo $row['title']; ?>" name="title" size=50></td></tr> <br>
 
-<tr><td>Nội dung: </td><td><input type="text" value="<?php echo $row['content']; ?>" name="cont" size=50></td></tr><br>
+<tr><td>Nội dung: </td><td><input type="text" value="<?php echo $row['content']; ?>" name="cont" size=50  style="padding: 0 0 15%;"></td></tr><br>
 <tr><td>Ngày Đăng: </td><td><input type="date" value="<?php echo $row['post_date']; ?>" name="date" size=50></td></tr><br>
 <tr><td>Ảnh: </td><td><input type="file" value="<?php echo $row['image']; ?>" name="image" size=50></td></tr><br>
 <tr><td></td><td><input type="submit" value="Update" name="update_course" class="bg-primary"></td></tr>

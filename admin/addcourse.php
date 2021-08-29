@@ -15,7 +15,7 @@
     
 
     <div id="main-main" class="container-fluid" style="background-color: rgb(166, 226, 226);" >
-    <h1 class="text-center">Add User</h1>
+    <h1 class="text-center">Thêm khóa học</h1>
         <main class="text-center" style="background-color: rgb(166, 226, 226);">
             <form method="POST" action="" style="background-color: rgb(166, 226, 226);width: 30%;margin : 6% 35%;">
                 <table>
@@ -51,7 +51,7 @@
                     <tr>
                         <td>Mô tả khóa học</td>
                         <td>
-                            <input type="text" name="desc" placeholder="Mô tả khóa học" size="50">
+                            <input type="text" name="desc" placeholder="Mô tả khóa học" size="50" style="padding: 0 0 15%;">
                         </td>
                     </tr>
                     <tr>
